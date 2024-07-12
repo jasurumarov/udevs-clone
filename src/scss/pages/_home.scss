@@ -1,0 +1,82 @@
+@use "../abstracts" as *;
+
+.wishlist-page {
+
+    h2,
+    ul,
+    .see-more {
+        display: none !important;
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 36px;
+        margin-top: 45px;
+        font-family: Poppins500;
+        font-size: 32px;
+        line-height: 52.5px;
+
+    }
+
+    .products__cards {
+        justify-content: start !important;
+    }
+
+    @media (max-width:672px) {
+        .products__cards {
+            justify-content: center !important;
+        }
+    }
+}
+
+
+
+.empty {
+    div {
+        position: absolute;
+        background: white;
+        top: 260px;
+        z-index: 9;
+    }
+}
+
+@media (max-width: 824px) {
+    .empty {
+        img {
+            width: 100%;
+            margin-right: 0 !important;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .empty {
+        div {
+            // z-index: -1;
+        }
+        img {
+            margin-top: -280px !important;
+            width: 100%;
+        }
+        h3 {
+            margin-top: -100px !important;
+        }
+    }
+}
+
+@media (max-width: 486px) {
+    .empty {
+        div {
+            top: 180px;
+            width: 100% !important;
+        }
+
+        img {
+            width: 100%;
+        }
+        h3 {
+            margin-top: -140px !important;
+        }
+    }
+}

@@ -1,0 +1,196 @@
+@use '../abstracts' as *;
+
+.header {
+    box-shadow: 0 1px 0 #e5e9f2;
+    background: white;
+    position: sticky;
+    top: 0;
+
+    nav {
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .header__logo {
+            width: 96px;
+            height: 32px;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+
+            a {
+                padding: 10px 0;
+                font-size: 14px;
+                font-family: Manrope700;
+                line-height: 20px;
+                border-radius: 2px;
+                transition: all .1s ease-in-out;
+                border-bottom: 2px solid transparent;
+                color: #18191f;
+
+                &:hover {
+                    border-bottom: 2px solid #1b5bf7;
+                }
+            }
+
+            a.active {
+                border-bottom: 2px solid #1b5bf7;
+            }
+
+            button {
+                padding: 10px 28px;
+                border-radius: 8px;
+                background: #1b5bf7;
+                font-size: 14px;
+                line-height: 20px;
+                font-family: Manrope700;
+                color: white;
+                transition: all .2s ease-in-out;
+
+                &:hover {
+                    scale: 1.05;
+                }
+            }
+        }
+
+        .header__menu-btn {
+            padding: 0 4px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            color: #1b5bf7;
+            font-size: 28px;
+        }
+    }
+}
+
+.responsive-header {
+    transform: translateX(200%);
+    transition: .7s;
+    background: #f4f7ff;
+    position: fixed;
+    width: 100%;
+    height: 105vh;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    .nav {
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .header__logo {
+            width: 96px;
+            height: 32px;
+        }
+
+        .header__menu-btn {
+            padding: 0 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1b5bf7;
+            font-size: 30px;
+        }
+    }
+
+    ul {
+        margin-top: 200px;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 12px;
+
+        a {
+            padding: 10px 0;
+            font-size: 32px;
+            font-family: Manrope700;
+            line-height: 20px;
+            border-radius: 2px;
+            transition: all .1s ease-in-out;
+            border-bottom: 2px solid transparent;
+            color: #18191f;
+        }
+
+    }
+
+    .responsive-header__contact-btn {
+        margin-top: 200px;
+
+        button {
+            width: 100%;
+            padding: 18px 28px;
+            border-radius: 8px;
+            background: #1b5bf7;
+            font-size: 20px;
+            line-height: 20px;
+            font-family: Manrope600;
+            color: white;
+            transition: all .2s ease-in-out;
+
+            &:hover {
+                scale: 1.02;
+            }
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            gap: 24px;
+
+            a {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: #1b5bf7;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+
+                svg {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+.responsive-header.active {
+    transform: translateX(0);
+}
+
+@media (max-width: 948px) {
+    .header {
+        nav {
+            ul {
+                gap: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 864px) {
+    .header {
+        nav {
+            height: 64px;
+
+            .header__menu-btn {
+                display: flex;
+            }
+
+            ul {
+                display: none;
+            }
+        }
+    }
+}
