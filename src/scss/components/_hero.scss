@@ -1,31 +1,116 @@
 .hero-section {
-    position: relative;
-
-    img {
-        width: 100%;
-        object-fit: cover;
-        user-select: none;
-
-    }
+    width: 100%;
+    height: 100%;
+    background-image: url(../../assets/images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
 
     &__content {
-        h1 {
-            max-width: 570px;
-            position: absolute;
-            top: 40%;
-            font-family: Poppins700;
-            font-size: 64px;
-            // line-height: 96px;
-            letter-spacing: 0.5px;
-            color: white;
+        padding: 110px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+
+        .hero__title {
+            width: 48%;
+            min-width: 442px;
+
+            img {
+                width: 267px;
+                height: 89px;
+                margin-bottom: 24px;
+            }
+
+            h1 {
+                margin-bottom: 20px;
+                font-size: 40px;
+                font-family: Manrope600;
+                color: #464359;
+                line-height: 54px;
+            }
+
+            div {
+                color: #1b5bf7;
+                font-size: 40px;
+                line-height: 54px;
+                margin-bottom: 48px;
+
+                span {
+                    font-family: Manrope700;
+                }
+            }
+
+            button {
+                padding: 18px 84px;
+                border-radius: 8px;
+                background: #1b5bf7;
+                font-size: 20px;
+                line-height: 20px;
+                font-family: Manrope600;
+                color: white;
+                transition: all .2s ease-in-out;
+
+                &:hover {
+                    scale: 1.06;
+                }
+            }
+        }
+
+        .hero__img {
+            max-width: 547.2px;
+            width: 100%;
         }
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width:900px) {
     .hero-section {
-        h1 {
-            font-size: 38px !important;
+        &__content {
+            gap: 20px;
+            flex-direction: column;
+
+            .hero__title {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                min-width: fit-content;
+                max-width: none;
+                width: 100%;
+                text-align: center;
+
+                img {
+                    width: 125px;
+                    height: 41.5px;
+                    margin-bottom: 24px;
+                }
+
+                h1 {
+                    margin-bottom: 20px;
+                    font-size: 24px;
+                    line-height: 32px;
+                    font-family: Manrope500;
+                }
+
+                div {
+                    font-size: 24px;
+                    line-height: 32px;
+
+                    span {
+                        font-family: Manrope700;
+                    }
+                }
+
+                button {
+                    display: none;
+                }
+            }
+
+            .hero__img {
+                max-width: 576px;
+                width: 100%;
+            }
         }
     }
 }
