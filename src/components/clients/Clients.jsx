@@ -97,7 +97,7 @@ const Clients = () => {
         },
     })
     return (
-        <section className='clients-section'>
+        <section id='clients' className='clients-section'>
             <div className="container">
                 <SectionTitles title={'Our clients'} />
             </div>

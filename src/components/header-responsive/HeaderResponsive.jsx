@@ -18,9 +18,9 @@ const HeaderResponsive = ({ menu, setMenu }) => {
                     </button>
                 </div>
                 <ul>
-                    <Link href={'#services'}>Services</Link>
-                    <Link href={'#clients'}>Clients</Link>
-                    <Link href={'#command'}>Command</Link>
+                    <Link onClick={() => setMenu(p => p = false)} href={'#mobile'}>Services</Link>
+                    <Link onClick={() => setMenu(p => p = false)} href={'#clients'}>Clients</Link>
+                    <Link onClick={() => setMenu(p => p = false)} href={'#command'}>Command</Link>
                 </ul>
                 <div className='responsive-header__contact-btn'>
                     <button>Contact</button>

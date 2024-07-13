@@ -51,7 +51,7 @@ const Services = () => {
         </div>
     ))
     return (
-        <section className='services-section'>
+        <section id='direction' className='services-section'>
             <div className="container">
                 <div className="services-section__content">
                     <SectionTitles title={'Our services'} />

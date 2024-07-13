@@ -2,7 +2,7 @@ import React from 'react'
 import SectionTitles from '../sectionTitles/SectionTitles'
 import Image from 'next/image';
 
-const DevService = ({ sectionTitle, desc, tools, technologies, phoneImg, classname }) => {
+const DevService = ({ sectionTitle, desc, tools, technologies, phoneImg, classname, id }) => {
     let toolsItem = tools?.map(item => (
         <div key={item.id}>
             <Image src={item.img} alt={item.title} />
@@ -17,7 +17,7 @@ const DevService = ({ sectionTitle, desc, tools, technologies, phoneImg, classna
         </div>
     ))
     return (
-        <section className={`devService-section ${classname}`}>
+        <section id={id} className={`devService-section ${classname}`}>
             <div className="container">
                 <SectionTitles title={sectionTitle} />
                 <div className="devService-section__content">

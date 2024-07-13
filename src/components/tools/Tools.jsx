@@ -397,7 +397,7 @@ const Tools = () => {
         </div>
     ))
     return (
-        <section className='tools-section'>
+        <section id='tools' className='tools-section'>
             <div className="container">
                 <SectionTitles title={'Tools'} />
                 <div className="tools-section__content">

@@ -23,7 +23,18 @@
             align-items: center;
             gap: 32px;
 
+            .dropdown-wrapper {
+                position: relative;
+
+                &:hover {
+                    ul {
+                        display: flex !important;
+                    }
+                }
+            }
+
             a {
+                position: relative;
                 padding: 10px 0;
                 font-size: 14px;
                 font-family: Manrope700;
@@ -40,6 +51,85 @@
 
             a.active {
                 border-bottom: 2px solid #1b5bf7;
+            }
+
+            .header__dropdown {
+                gap: 0;
+                position: absolute;
+                top: 33px;
+                left: 60px;
+                width: 300px;
+                padding: 18px 0;
+                border-radius: 8px;
+                box-shadow: 0 0 2px rgba(0, 0, 0, .04), 0 4px 4px rgba(0, 0, 0, .08);
+                background-color: #fff;
+                list-style-type: none;
+                transform: translateX(-50%);
+                display: none;
+                flex-direction: column;
+                align-items: start;
+
+                p {
+                    padding: 0 24px;
+                    margin-bottom: 20px;
+                    font-size: 12px;
+                    line-height: 18px;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    color: rgba(0, 0, 0, .4);
+                }
+
+                a {
+                    margin-bottom: 8px;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    padding: 8px 11px 8px 34px;
+                    transition: all .1s ease-in-out;
+                    border-bottom: 0;
+
+                    &:hover {
+                        background: #1b5bf7;
+
+                        span {
+                            color: white;
+                        }
+                    }
+
+                    img {
+                        width: 48px;
+                        height: 48px;
+                        margin-right: 24px;
+                    }
+
+                    span {
+                        font-size: 13px;
+                        line-height: 19px;
+                        font-weight: 400;
+                        color: #000;
+                    }
+                }
+            }
+
+            .header__dropdown-lang {
+                max-width: 120px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+
+                a {
+                    padding-left: 12px;
+
+                    img {
+                        width: 28px;
+                        height: 28px;
+                        margin-right: 16px;
+                    }
+
+                    span {
+                        font-size: 16px !important;
+                        font-family: Manrope600 !important;
+                    }
+                }
             }
 
             button {

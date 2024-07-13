@@ -8,7 +8,7 @@ import TeamImg from '@/assets/images/team.svg'
 
 const Team = () => {
     return (
-        <section className='team-section'>
+        <section id='command' className='team-section'>
             <div className="container">
                 <SectionTitles title={'Team'} />
                 <div className="team-section__content">
