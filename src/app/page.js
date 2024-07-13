@@ -6,6 +6,7 @@ import Services from "@/components/services/Services";
 import Team from "@/components/team/Team";
 import Tools from "@/components/tools/Tools";
 import Systems from "@/components/systems/Systems";
+import Clients from "@/components/clients/Clients";
 
 // Mobile Icons
 import MobileTools1 from '@/assets/icons/mobiletools1.svg'
@@ -56,6 +57,7 @@ import ConsultingIcon6 from '@/assets/icons/consulting-icon6.svg'
 
 // Stastics Image
 import StasticsImg from '@/assets/images/stastics.svg'
+import Footer from "@/components/footer/Footer";
 
 
 export default function Home() {
@@ -72,7 +74,9 @@ export default function Home() {
                 <Systems desc={'Our experienced professionals will help you optimize your infrastructure'} sectionTitle={'Optimization Infrastructure'} benefits={[{ id: 1, title: 'Architecture', img: OptimizeImg1 }, { id: 2, title: 'Auto testing', img: OptimizeImg2 }, { id: 3, title: 'Stress testing', img: OptimizeImg3 }, { id: 4, title: 'Load testing', img: OptimizeImg4 }, { id: 5, title: 'Devops', img: OptimizeImg5 }, { id: 6, title: 'Cloud', img: OptimizeImg6 }, { id: 7, title: 'CI / CD', img: OptimizeImg7 },]} />
                 <DevService classname={'consulting-section'} phoneImg={StasticsImg} sectionTitle={'IT consulting'} desc={'We can improve the qualifications of your employees thereby increasing the efficiency of your company'} tools={[{ id: 1, img: ConsultingIcon1, title: 'Frontend' }, { id: 2, img: ConsultingIcon2, title: 'Backend' }, { id: 3, img: ConsultingIcon3, title: 'Architecture' }, { id: 4, img: ConsultingIcon4, title: 'DevOps' }, { id: 5, img: ConsultingIcon5, title: 'UX/UI' }, { id: 6, img: ConsultingIcon6, title: 'QA' }]} />
                 <Tools />
+                <Clients />
             </main>
+            <Footer />
         </>
     );
 }
