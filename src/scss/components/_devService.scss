@@ -89,6 +89,16 @@
     }
 }
 
+.consulting-section {
+    h3 {
+        display: none !important;
+    }
+    .devService__img {
+        background-image: none !important;
+        max-width: 500px;
+    }
+}
+
 @media (max-width: 900px) {
     .devService-section {
         h1 {

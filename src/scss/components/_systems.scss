@@ -1,0 +1,119 @@
+.systems-section {
+    padding: 80px 0;
+    background: #f4f7ff;
+
+    &__content {
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+
+        .systems__img {
+            background-image: url(../../assets/images/phone-bg.png);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 500px;
+            overflow: hidden;
+            border-radius: 24px;
+
+            img {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .systems__title {
+            max-width: 500px;
+
+            p {
+                font-size: 24px;
+                line-height: 40px;
+                font-family: Manrope500;
+                margin-bottom: 40px;
+                color: #18191f;
+            }
+
+            .systems__title-benefits {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+                margin-bottom: 40px;
+
+                div {
+                    padding: 10px;
+                    min-width: 150px;
+                    border-radius: 8px;
+                    background: #e0e8ff;
+
+                    img {
+                        margin-bottom: 12px;
+                        width: 56px;
+                        height: 56px;
+                    }
+
+                    h4 {
+                        font-size: 18px;
+                        line-height: 30px;
+                        font-family: Manrope300;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .systems-section {
+        h1 {
+            max-width: 270px;
+            text-align: left;
+        }
+
+        &__content {
+            max-width: 500px;
+            flex-direction: column;
+            margin-top: 22px;
+            gap: 0;
+
+            .systems__title {
+                p {
+                    font-size: 16px;
+                    line-height: 30px;
+                    margin-top: 16px;
+                    margin-bottom: 26px;
+                }
+
+                .systems__title-benefits {
+                    gap: 8px;
+                    margin-bottom: 28px;
+
+                    div {
+                        padding: 8px;
+                        min-width: 95px;
+                        min-height: 100px;
+
+                        img {
+                            width: 42px;
+                            height: 42px;
+                            margin-bottom: 6px;
+                        }
+
+                        h4 {
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+
+            .systems__img {
+                height: 100% !important;
+
+                img {
+                    height: auto;
+                }
+            }
+        }
+    }
+}
