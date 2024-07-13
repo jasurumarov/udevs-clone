@@ -1,6 +1,10 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import SectionTitles from '../sectionTitles/SectionTitles'
+
+// Aos
+import Aos from 'aos'
+import 'aos/dist/aos.css';
 
 // Icons
 import Tool1 from '@/assets/icons/tool1.svg'
@@ -376,6 +380,10 @@ const toolData = [
 ]
 
 const Tools = () => {
+    useEffect(() => {
+        Aos.init()
+    }, [])
+
     const [selectedCategory, setSelectedCategory] = useState('');
 
     const handleCategoryChange = (category) => {
@@ -398,7 +406,7 @@ const Tools = () => {
     ))
     return (
         <section id='tools' className='tools-section'>
-            <div className="container">
+            <div data-aos="fade-up" className="container">
                 <SectionTitles title={'Tools'} />
                 <div className="tools-section__content">
                     <div className="tools__radios">

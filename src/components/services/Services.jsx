@@ -1,5 +1,10 @@
+'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
+
+// Aos
+import Aos from 'aos'
+import 'aos/dist/aos.css';
 
 // Icons
 import ServiceIcon1 from '@/assets/icons/service-icon1.svg'
@@ -44,6 +49,9 @@ const servicesData = [
 ]
 
 const Services = () => {
+    useEffect(() => {
+        Aos.init()
+    }, [])
     let servicesItem = servicesData?.map(item => (
         <div key={item.id}>
             <Image src={item.img} alt={item.title} />
@@ -51,7 +59,7 @@ const Services = () => {
         </div>
     ))
     return (
-        <section id='direction' className='services-section'>
+        <section data-aos="fade-up" id='direction' className='services-section'>
             <div className="container">
                 <div className="services-section__content">
                     <SectionTitles title={'Our services'} />

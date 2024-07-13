@@ -1,7 +1,11 @@
 'use client'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
+
+// Aos
+import Aos from 'aos'
+import 'aos/dist/aos.css';
 
 // Icons
 import { IoMenu } from "react-icons/io5";
@@ -18,9 +22,12 @@ import EngIcon from '@/assets/icons/eng.svg'
 
 const Header = () => {
     const [menu, setMenu] = useState(false)
+    useEffect(() => {
+        Aos.init()
+    }, [])
     return (
         <>
-            <header className='header'>
+            <header data-aos="fade-down" className='header'>
                 <div className="container">
                     <nav>
                         <Image className='header__logo' src={SiteLogo} />
