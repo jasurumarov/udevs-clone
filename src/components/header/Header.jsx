@@ -106,8 +106,8 @@ const Header = () => {
                         </button>
                     </nav>
                 </div>
-                <HeaderResponsive menu={menu} setMenu={setMenu} />
             </header>
+            <HeaderResponsive menu={menu} setMenu={setMenu} />
         </>
     )
 }

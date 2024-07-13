@@ -61,6 +61,17 @@
         .hero__img {
             max-width: 547.2px;
             width: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+@media (max-width:1058px) {
+    .hero-section {
+        &__content {
+            .hero__img {
+                // max-width: 400px;
+            }
         }
     }
 }

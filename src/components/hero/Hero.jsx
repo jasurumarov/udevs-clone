@@ -31,7 +31,9 @@ const Hero = () => {
                         />
                         <button>Contact</button>
                     </div>
+                    <div>
                     <Image className='hero__img' src={HeroImg} alt='hero img' />
+                    </div>
                 </div>
             </div>
         </section>
